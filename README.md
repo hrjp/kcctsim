@@ -26,3 +26,7 @@ roslaunch kcctsim sim.launch
     * topic名変更はkcctsim/robots/naviton.urdf.xacro
 * tf ([tf/tfMessage](http://docs.ros.org/en/api/tf/html/msg/tfMessage.html))
     * /odom -> /base_foot_point -> /base_link
+
+## Reference
+
+[Gazebo + ROS で自分だけのロボットをつくる](https://qiita.com/RyodoTanaka/items/c3014fd6d0f06d12814f)
