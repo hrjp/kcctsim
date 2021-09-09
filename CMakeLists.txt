@@ -121,6 +121,11 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
+
+add_executable(twist_joy_selecter src/twist_joy_selecter.cpp)
+target_link_libraries(twist_joy_selecter ${catkin_LIBRARIES})
+
+
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/kcctsim.cpp
