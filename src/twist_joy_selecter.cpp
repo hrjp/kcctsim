@@ -24,14 +24,18 @@ void cmd_callback(const geometry_msgs::Twist& cmd_vel_){
 geometry_msgs::Twist joy_cmd_vel;
 bool use_joy=false;
 void joy_callback(const sensor_msgs::Joy& joy_msg){
-    joy_cmd_vel.linear.x =joy_msg.axes[1];
-    joy_cmd_vel.linear.y =joy_msg.axes[0];
-    joy_cmd_vel.angular.z=joy_msg.axes[3];
-    if(joy_msg.buttons.at(8)){
-        use_joy=true;
+    if(joy_msg.axes.size()>3){
+        joy_cmd_vel.linear.x =joy_msg.axes[1];
+        joy_cmd_vel.linear.y =joy_msg.axes[0];
+        joy_cmd_vel.angular.z=joy_msg.axes[3];
     }
-    if(joy_msg.buttons.at(9)){
-        use_joy=false;
+    if(joy_msg.buttons.size()>9){
+        if(joy_msg.buttons.at(8)){
+            use_joy=true;
+        }
+        if(joy_msg.buttons.at(9)){
+            use_joy=false;
+        }
     }
 }
 

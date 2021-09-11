@@ -6,7 +6,8 @@
   <xacro:include filename="$(find kcctsim)/urdf/sensors/gps/gps.urdf.xacro"/>
   <xacro:include filename="$(find kcctsim)/urdf/sensors/gim30/gim30.urdf.xacro"/>
   <xacro:include filename="$(find kcctsim)/urdf/sensors/lrf/lrf.urdf.xacro"/>
-
+  <!--<xacro:include filename="$(find kcctsim)/urdf/sensors/imu/imu.urdf.xacro"/>
+-->
   <!-- =============== Link & Joint =============== -->
   <!-- Base -->
   <link name="base_foot_point"/>
@@ -36,6 +37,10 @@
  <!--<xacro:gim30_v0 parent="base_link">
   	<origin xyz="0.07395931 0 0.24578237"/>
   </xacro:gim30_v0>-->
+<!--
+  <xacro:imu prefix="top" parent="base_link">
+	<origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  </xacro:imu>-->
 
   <!-- Front LRF -->
   <xacro:lrf_v0 prefix="front" parent="base_link">
