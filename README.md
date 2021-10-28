@@ -2,6 +2,11 @@
 gazebo上でナビトンを動かすパッケージ
 topicがハードウェアを動かす時と対応しているので実物と同じ感覚でシミュレーションが可能
 
+## Dependency
+
+```
+sudo apt-get install ros-kinetic-velodyne-*
+```
 
 ## sim.launch
 
