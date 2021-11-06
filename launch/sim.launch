@@ -5,8 +5,10 @@
   <!--Robot Model-->
   <arg name="model" default="$(find kcctsim)/robots/naviton.urdf.xacro"/>
   <!--Gazebo World file-->
+  <!--軽いworld-->
   <arg name="world_name" default="$(find kcctsim)/worlds/clearpath_playpen.world"/>
-
+  <!--重いworld-->
+  <!--<arg name="world_name" default="$(find kcctsim)/worlds/autoware.world"/>-->
 
   <arg name="paused" default="false"/>
   <arg name="use_sim_time" default="true"/>
