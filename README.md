@@ -2,6 +2,12 @@
 gazebo上でナビトンを動かすパッケージ
 topicがハードウェアを動かす時と対応しているので実物と同じ感覚でシミュレーションが可能
 
+#### Naviton robot model
+![robotmodel](image/kcctsim_robotmodel.png)
+
+#### rqt_graph
+![rqt_graph](image/kcctsim_rqt_graph.png)
+
 ---
 ## Dependency
 
