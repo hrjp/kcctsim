@@ -41,10 +41,17 @@
   <!-- ros_control motoman launch file -->
   <include file="$(find kcctsim)/launch/robot_control.launch"/>
 
-  <node pkg="kcctsim" name="twist_remapper" type="twist_remapper.py" output="screen">
+  <!--<node pkg="kcctsim" name="twist_remapper" type="twist_remapper.py" output="screen">
+	<remap from="cmd_vel" to="final_cmd_vel" />
+	</node>-->
+
+  <node pkg="kcctsim" name="twist_joy_selecter" type="twist_joy_selecter" output="screen">
 	<remap from="cmd_vel" to="final_cmd_vel" />
 	</node>
+  <node name="joy_node" pkg="joy" type="joy_node" />
+
 	<node pkg="kcctsim" name="linear_vel_node" type="linear_vel_node.py" output="screen"/>
+  <node pkg="kcctsim" name="odom_remaper" type="odom_remaper" output="screen"/>
 
   
 </launch>

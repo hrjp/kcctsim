@@ -126,6 +126,12 @@ include_directories(
 #   src/${PROJECT_NAME}/kcctsim.cpp
 # )
 
+add_executable(twist_joy_selecter src/twist_joy_selecter.cpp)
+target_link_libraries(twist_joy_selecter ${catkin_LIBRARIES})
+
+add_executable(odom_remaper src/odom_remaper.cpp)
+target_link_libraries(odom_remaper ${catkin_LIBRARIES})
+
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
