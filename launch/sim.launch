@@ -51,6 +51,7 @@
   <node name="joy_node" pkg="joy" type="joy_node" />
 
 	<node pkg="kcctsim" name="linear_vel_node" type="linear_vel_node.py" output="screen"/>
+  <node pkg="kcctsim" name="odom_remaper" type="odom_remaper" output="screen"/>
 
   
 </launch>
