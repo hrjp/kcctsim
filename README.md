@@ -1,3 +1,6 @@
+![license](https://img.shields.io/github/license/kcctsim/naviton)
+![size](https://img.shields.io/github/repo-size/hrjp/kcctsim)
+![commit](https://img.shields.io/github/last-commit/hrjp/kcctsim/main)
 # kcctsim
 gazebo上でナビトンを動かすパッケージ
 topicがハードウェアを動かす時と対応しているので実物と同じ感覚でシミュレーションが可能
