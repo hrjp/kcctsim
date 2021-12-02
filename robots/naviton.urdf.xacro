@@ -41,19 +41,32 @@
 
   <!-- Front LRF -->
   <xacro:lrf_v0 prefix="front" parent="base_link">
-  	<origin xyz="0.225 -0.245 0.195"/>
+  	<origin xyz="0.225 0.0 0.195"/>
   </xacro:lrf_v0>
+  <link name="2d_blue"/>
+    <joint name="2d_blue_joint" type="fixed">
+    <parent link="front_lrf_link"/>
+    <child link="2d_blue"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
 
   <!-- Rear LRF -->
   <xacro:lrf_v0 prefix="rear" parent="base_link">
-  	<origin xyz="-0.485 0.245 0.195" rpy="0 0 -${M_PI}"/>
+  	<origin xyz="-0.485 0.0 0.195" rpy="0 0 -${M_PI}"/>
   </xacro:lrf_v0>
+  <link name="2d_orange"/>
+    <joint name="2d_orange_joint" type="fixed">
+    <parent link="rear_lrf_link"/>
+    <child link="2d_orange"/>
+    <origin xyz="0 0 0"/>
+  </joint>
 
   <link name="camera_link"/>
-  <joint name="lrf_link_joint" type="fixed">
-	<parent link="base_link"/>
-	<child link="camera_link"/>
-	<origin xyz="0 0 0.195"/>
+    <joint name="lrf_link_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="camera_link"/>
+    <origin xyz="0 0 0.195"/>
   </joint>
 <!--
   <link name="imu_link"/>
@@ -90,7 +103,7 @@
 					   min_rad="-1.65806278939" max_rad="1.65806278939"
 					   min_range="0.10" max_range="60.0"/>
   <xacro:lrf_gazebo_v0 topic_name="scan2" prefix="rear"
-					   min_rad="-2.35619449019" max_rad="1.65619449019"
+					   min_rad="-1.65806278939" max_rad="1.65619449019"
 					   min_range="0.10" max_range="60.0"/>
   <!-- VHDL-32E -->
   <HDL-32E parent="base_link" name="velodyne_link" topic="velodyne_points" hz="10" samples="1024" gpu="true">
