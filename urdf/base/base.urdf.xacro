@@ -18,7 +18,7 @@
 		 <mesh filename="package://kcctsim/meshes/STL/base/body.stl"/>
 		</geometry>
 		<material name="gray">
-    <color rgba="0.8 0.8 0.8 2.0"/>
+    <color rgba="0.8 0.8 0.8 1.0"/>
   </material>
 	  </visual>
 	  <collision>
